@@ -1,0 +1,186 @@
+body{
+    text-align: center;
+    margin:0px;
+    color:#222831;
+    font-family: 'Cardo', serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Open Sans', sans-serif;
+    padding: 2rem 0;
+}
+
+p{
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+hr{
+    width: 10%;
+    border-top: 10px dotted #eeeeee;
+}
+
+
+.container-fluid{
+    padding: 7% 10%;
+}
+
+#title .container-fluid{
+    padding: 0% 10%;
+  }
+  
+.logo-image{
+   width: 100px; 
+   padding: 0% 4% 4%;
+}
+.navbar {
+    padding: 0 0 1rem;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.nav-item{
+    font-size:1.5rem;
+}
+
+
+.big-heading{
+    padding: 4.5rem 0 2rem;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.navbar .navbar-nav .nav-link{
+    color: black;
+}
+
+.navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link:focus{
+    color:black;
+    outline: 2px transparent solid;
+    box-shadow: 0 0 0 2px black;
+}
+
+.navbar .navbar-nav .active>.nav-link{
+    color:white;
+    background-color: #222831 ;
+}
+.navbar .navbar-nav .active>.nav-link:hover,.navbar .navbar-nav .active>.nav-link:focus{
+    outline: 2px transparent solid;
+    box-shadow: 0 0 0 2px #ffd369, 0 0 0 4px black;
+}
+
+.square-frame{
+    height:100%;
+    width: 70%;
+    border-left: 10px solid #eeeeee;
+    border-right: 10px solid #eeeeee;
+    border-bottom: 10px solid #eeeeee;
+    border-top: 10px solid #eeeeee;
+    position: absolute;
+    right: 10%;
+    z-index: 1;
+    transform: rotate(10deg);
+}
+.title-image-group{
+    position: relative;
+}
+.title-image{
+    width:100%;
+}
+
+.my-name{
+    background-color: #222831;
+    color:white;
+    padding: 0 1rem;
+}
+
+#title{
+    text-align: left;
+    background-image: url("../images/network-grid.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color:#ffd369;
+    opacity: 0.95;
+}
+
+
+.section-heading{
+    font-size:2.5rem;
+}
+
+/* Skills Section */
+
+.skills-columns{
+    padding:5% 2%;
+    text-align: left;
+    line-height: 2rem;
+}
+#skills{
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
+.skill-icons{
+    padding: 2rem;
+    border: 8px solid #ffd369;
+    transform: rotate(-10deg);
+}
+
+.skill-icons:hover{
+    transform: rotate(0deg);
+}
+
+.btn-outline-dark:focus{
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+}
+
+/* Download Resume */
+#resume{
+    background-color: #ffd369;
+}
+
+/* Contact Us region */
+.social-icons{
+    color: white;
+    padding: 2% 2% 2%;
+    margin-bottom: 1rem;
+}
+a :hover{
+    color:#ffd369;
+}
+
+#cta .container-fluid{
+    background-color: #222831;
+    color:white;
+    padding:2%;
+}
+
+#cta p{
+    font-size: 1rem;
+}
+
+@media (max-width: 992px){
+    #title{
+        text-align: center;
+        padding-bottom: 7%;
+    }
+    .title-image{
+        width:25%;
+        border-radius: 100%;
+        background-color:white ;
+        border: 3px solid #222831;
+    }
+    .square-frame{
+        display: none;
+    }
+
+    .skill-icons{
+        transform: rotate(0deg);
+    }
+}
+
