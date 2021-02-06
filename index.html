@@ -21,41 +21,60 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script>
+            if ($(window).width() > 992) {
+                $(window).scroll(function(){  
+                    if ($(this).scrollTop() > 40) {
+                        $('#navbar_top').removeClass("navbar-light");
+                        $('#navbar_top').addClass("fixed-top nav-background-color navbar-dark");
+                        // add padding top to show content behind navbar
+                        $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+                    }else{
+                        $('#navbar_top').removeClass("fixed-top nav-background-color navbar-dark");
+                        $('#navbar_top').addClass("navbar-light");
+                        // remove padding top from body
+                        $('body').css('padding-top', '0');
+                    }   
+                });
+                } // end i
+        </script>
     </head>
     <body>  
-        <section id="title">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light"> 
+        <nav id="navbar_top" class="navbar navbar-expand-xl navbar-light"> 
+            <div class="navbar-container container-fluid">
                 <a class="navbar-brand" href="#">
                     <img class="logo-image" src="images/logo.jpg">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                    <i class="menu-button fas fa-bars fa-2x"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item px-2 active">
-                    <a class="nav-link" href="#">Who I Am<span class="sr-only">(current)</span></a>
+                    <li class="nav-item px-1">
+                    <a class="nav-link" href="#title">Who I Am<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item px-2">
-                    <a class="nav-link" href="#">What I Can Do</a>
+                    <li class="nav-item px-1">
+                    <a class="nav-link" href="#skills">What I Can Do</a>
                     </li>
-                    <li class="nav-item px-2">
-                    <a class="nav-link" href="#">Download Resume</a>
+                    <li class="nav-item px-1">
+                    <a class="nav-link" href="#resume">Download Resume</a>
                     </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link" href="#">Get In Touch</a>
+                    <li class="nav-item px-1">
+                        <a class="nav-link" href="#cta">Get In Touch</a>
                     </li>
                 </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
+        <section id="title">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-xl-6">
                   <h1 class="big-heading">Hi, <br> I'm <span class="my-name">Avirup.</span></h1>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 </div>
         
-                <div class="col-lg-6 title-image-group">
+                <div class="col-xl-6 title-image-group">
                     <div class="square-frame"></div>
                     <img class="title-image" src="images/profile-image.png" alt="">
                 </div>
@@ -71,43 +90,43 @@
                           <h2 class="section-heading">What I Can Do</h2>
                           <hr>
                       </div>
-                      <div class="skills-columns col-lg-4 col-md-6 col-sm-12">
+                      <div class="skills-columns col-xl-4 col-lg-6 col-md-12 col-sm-12">
                             <i class="skill-icons fas fa-magic fa-4x"></i>
                             <div class="circle"></div>
                             <h3>UI and UX Designing</h1>
                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                              <button class="btn btn-outline-dark btn-lg">Know More</button>
                         </div>
-                      <div class="skills-columns col-lg-4 col-md-6 col-sm-12">
+                      <div class="skills-columns col-xl-4 col-lg-6 col-md-12 col-sm-12">
                             <i class="skill-icons fas fa-laptop-code fa-4x"></i>
                             <div class="circle"></div>
                             <h3>Web Development</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                             <button class="btn btn-outline-dark btn-lg">Know More</button>
                         </div>
-                        <div class="skills-columns col-lg-4 col-md-6 col-sm-12">
+                        <div class="skills-columns col-xl-4 col-lg-6 col-md-12 col-sm-12">
                             <i class="skill-icons fab fa-android fa-4x"></i>
                             <div class="circle"></div>
                             <h3>Android App Development</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                             <button class="btn btn-outline-dark btn-lg">Know More</button>
                         </div>
-                        <div class="skills-columns col-lg-4 col-md-6 col-sm-12">
+                        <div class="skills-columns col-xl-4 col-lg-6 col-md-12 col-sm-12">
                             <i class="skill-icons fas fa-chart-line fa-4x"></i>
                             <div class="circle"></div>
                             <h3>Predictive Analytics and Modelling</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                             <button class="btn btn-outline-dark btn-lg">Know More</button>
                         </div>  
-                        <div class="skills-columns col-lg-4 col-md-6 col-sm-12">
+                        <div class="skills-columns col-xl-4 col-lg-6 col-md-12 col-sm-12">
                             <i class="skill-icons fas fa-users fa-4x"></i>
                             <div class="circle"></div>
                             <h3>Performance Engineering</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                             <button class="btn btn-outline-dark btn-lg">Know More</button>
                         </div>   
-                        <div class="skills-columns col-lg-4 col-md-6 col-sm-12">
-                            <i class="skill-icons fas fa-blind fa-4x"></i>
+                        <div class="skills-columns col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                            <i class="skill-icons fab fa-accessible-icon fa-4x"></i>
                             <div class="circle"></div>
                             <h3>Accessibility</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -131,7 +150,7 @@
                 <a href="#"><i class="social-icons fab fa-twitter fa-2x"></i></a>
                 <a href="#"><i class="social-icons fas fa-envelope fa-2x"></i></a>
                 <br>
-                <p> Copyright © Avirup Debnath</p>
+                <p> 2021 © Avirup Debnath</p>
             </div>
 
         </section>
